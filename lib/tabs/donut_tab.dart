@@ -20,15 +20,17 @@ class DonutTab extends StatelessWidget {
       padding: const EdgeInsets.all(12),
       //Encargado de organizar la cuadrícula
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+      //Relación de aspecto
+        childAspectRatio: 1 / 1.5,
       //Determinar número de columnas
           crossAxisCount: 2),
       itemBuilder: (context,index){
       //Elemento individual de la cuadrícula
         return DonutTile(
           donutFlavor : donutsOnSale [index][0],
-          donutPrice : donutsOnSale [index][0],
-          donutColor : donutsOnSale [index][0],
-          imageName : donutsOnSale [index][0],
+          donutPrice : donutsOnSale [index][1],
+          donutColor : donutsOnSale [index][2],
+          imageName : donutsOnSale [index][3],
 
         );
       },//Contexto y donde está
