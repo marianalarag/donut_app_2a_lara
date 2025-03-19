@@ -74,10 +74,10 @@ class _HomePageState extends State<HomePage> {
               child: TabBarView(
                 children: [
                   DonutTab(),
-                  const BurgerTab(),
-                  const SmoothieTab(),
-                  const PancakesTab(),
-                  const PizzaTab(),
+                  BurgerTab(),
+                  SmoothieTab(),
+                  PancakesTab(),
+                  PizzaTab(),
                 ],
               ),
             ),
