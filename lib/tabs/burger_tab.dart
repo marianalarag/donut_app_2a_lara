@@ -2,20 +2,23 @@ import 'package:donut_app_2a_lara/utils/donut_tile.dart';
 import 'package:flutter/material.dart';
 
 class BurgerTab extends StatelessWidget {
+    final void Function(String, String) addToCart;
+
+    BurgerTab({super.key, required this.addToCart});
   // Lista de donas con 8 opciones
   final List donutsOnSale = [
     // [ donutFlavor, donutStore, donutPrice, donutColor, imageName ]
-    ["Ice Cream", "Krispy Kream", "36", Colors.blue, "lib/images/icecream_donut.png"],
-    ["Strawberry", "Dunkin Donuts", "45", Colors.red, "lib/images/strawberry_donut.png"],
-    ["Grape Ape", "Krispy Kream", "84", Colors.purple, "lib/images/grape_donut.png"],
-    ["Choco", "Dunkin Donuts", "95", Colors.brown, "lib/images/chocolate_donut.png"],
-    ["Vanilla", "Krispy Kream", "50", Colors.yellow, "lib/images/grape_donut.png"],
-    ["Blueberry", "Dunkin Donuts", "70", Colors.indigo, "lib/images/icecream_donut.png"],
-    ["Matcha", "Krispy Kream", "65", Colors.green, "lib/images/icecream_donut.png"],
-    ["Caramel", "Dunkin Donuts", "80", Colors.orange, "lib/images/icecream_donut.png"],
+    ["Whopper Doble","Burger King", "36", Colors.blue, "lib/images/burger1.png"],
+    ["Route 66","Jhonny Rockets", "45", Colors.red, "lib/images/burger2.png"],
+    ["Quarter","Mc Donalds", "84", Colors.purple, "lib/images/burger3.png"],
+    ["Western Bacon","Carl's Jr.", "95", Colors.brown, "lib/images/burger4.png"],
+    ["Baconator","Wendy's", "36", Colors.yellow, "lib/images/burger5.png"],
+    ["Monster 880","Sixtie's", "45", Colors.pink, "lib/images/burger6.png"],
+    ["Crispy Onion","Mítica", "84", Colors.green, "lib/images/burger7.png"],
+    ["Honey Burger","KFC", "95", Colors.blueGrey, "lib/images/burger8.png"],
   ];
 
-  BurgerTab({super.key});
+
 
   @override
   Widget build(BuildContext context) {
@@ -33,6 +36,7 @@ class BurgerTab extends StatelessWidget {
           donutPrice: donutsOnSale[index][2],
           donutColor: donutsOnSale[index][3],
           imageName: donutsOnSale[index][4],
+          addToCart: addToCart, 
         );
       },
     );
